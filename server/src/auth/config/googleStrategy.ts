@@ -38,6 +38,7 @@ export const getGoogleAuthStrategy = () => {
         if (!user) {
           user = await prisma.user.create({
             data: {
+              id: profile.id,
               username: profile.displayName,
               nickname: profile.displayName,
               email: profile.email,
