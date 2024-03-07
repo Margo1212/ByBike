@@ -8,7 +8,7 @@ if (!process.env.SECRET_TOKEN) {
 }
 
 export const googleCallback: RequestHandler = (req, res) => {
-  const accessToken = jwt.sign({ userId: req.user?.id }, process.env.SECRET_TOKEN, { expiresIn: '6d' });
+  const accessToken = jwt.sign({ userId: req.user?.id }, process.env.SECRET_TOKEN, { expiresIn: '30d' });
   const ROUTE_AFTER_SUCCESSFUL_LOGIN = `${process.env.CLIENT_URL}/auth/redirect?accessToken=${accessToken}`;
 
   res.redirect(ROUTE_AFTER_SUCCESSFUL_LOGIN);
