@@ -22,7 +22,7 @@ export const getGoogleAuthStrategy = () => {
     {
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      callbackURL: 'https://bybike.onrender.com/api/auth/google/callback',
+      callbackURL: '/api/auth/google/callback',
       passReqToCallback: true,
     },
     async (
