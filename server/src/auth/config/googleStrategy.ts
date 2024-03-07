@@ -15,6 +15,7 @@ export const getGoogleAuthStrategy = () => {
   if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
     // eslint-disable-next-line no-console
     console.error('Missing GOOGLE_CLIENT_ID or GOOGLE_CLIENT_SECRET');
+
     process.exit(1);
   }
 

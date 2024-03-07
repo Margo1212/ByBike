@@ -14,5 +14,9 @@ authRouter.get('/me', authMiddleware, getMe);
 
 authRouter.get('/google/login', googleLogin);
 authRouter.get('/google/callback', googleAuthMiddleware, googleCallback);
+authRouter.get('/auth/google/callback', (req, res, next) => {
+  console.log('Received redirect URI:', req.url);
+  // Rest of your authentication code
+});
 
 export { authRouter };
